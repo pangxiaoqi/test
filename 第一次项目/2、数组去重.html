@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组去重</title>
+    <script type="text/javascript">
+        function handler(arr){
+            var result=[];//定义新数组,用于存放数组不重复的结果
+            for (i=0;i<arr.length;i++){
+                if(arr.indexOf(arr[i])==i)//indexOf()方法可返回某个指定的字符串值在字符串中首次出现的位置
+                    result.push(arr[i]);//如果当前数组的第i项在当前数组中第一次出现的位置是i,则存入数组result中,否则不存.
+            }
+            return result;
+        }
+        var arr=[1,2,3,4,5,3,4,6,8,1];
+        console.log("数组去重前：");
+        console.log(arr);
+        var resu=handler(arr);
+        console.log("数组去重后：");
+        console.log(resu);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>将一个正整数分解质因数</title>
+    <script type="text/javascript">
+        var a=120;
+        var b="";
+        var temp=a;//保存原始数据
+        for (var c=2;c<=a;c++) {
+            // 判断a%b==0;
+            if (a%c==0&&a!==c) {
+                //a!==c不存最后一个数,防止120=2*2*2*3*5*
+                //只存2*2*2*3*
+                b+=c+"*";//拼接字符串
+                //120/2=60 60/2=30 30/2=15 15/3=5  5/5=1
+                a=a/c;
+                c--;
+            }else if(a==c){
+                b+=c;
+                break;
+            }
+        }
+        document.write("正整数分解质因数结果为："+temp+"="+b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

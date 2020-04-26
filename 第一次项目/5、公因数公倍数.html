@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>求两个正整数的最大公约数和最小公倍数</title>
+    <script type="text/javascript">
+        function handler(a,b){
+            do{
+                if(a>b){
+                    a=a-b;
+                }
+                if(a<b){
+                    b=b-a;
+                }
+                if(a==b){
+                    return a
+                }
+            }while(a!=b);
+        }
+        function gbs(a,b){
+            return (a*b)/handler(a,b)
+        }
+        // 最大公因数
+        var result1=handler(6,12);
+        console.log("最大公因数:"+result1);
+        //最小公倍数
+        var result2=gbs(6,12);
+        console.log("最小公倍数:"+result2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

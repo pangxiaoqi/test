@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>四种九九乘法表-do-while方法</title>
+    <script type="text/javascript">
+        //九九乘法表1
+        document.write("四种九九乘法表-do-while方法");
+        document.write("<table width=600px");
+        var i=1;
+        do{
+            document.write("<tr>");
+            var j=1;
+                while(j<=i){
+                    document.write("<td>"+j+"*"+i+"="+j*i+"</td>");
+                    j++;
+                }
+            document.write("</tr>");
+            i++;
+        }while(i<=9);
+        document.write("</table>");
+        document.write("<br/>")
+        
+        //------------------------------------------
+        //九九乘法表2
+        document.write("<table width=600px");
+        var i=9;
+        do{
+            document.write("<tr>");
+            var j=1;
+                while(j<=i){
+                    document.write("<td>"+j+"*"+i+"="+j*i+"</td>");
+                    j++;
+                }
+            document.write("</tr>");
+            i--;
+        }while(i>=1);
+        document.write("</table>");
+        document.write("<br/>");
+
+        //------------------------------------------
+        //九九乘法表3
+        document.write("<table width=600px");
+        var i=1;
+        do{
+            document.write("<tr>");
+            var k=9;
+            while(k>i){
+                document.write("<td> </td >");
+                k--;
+            }
+            var j=i;
+                while(j>=1){
+                    document.write("<td>"+j+"*"+i+"="+j*i+"</td>");
+                    j--;
+                }
+            document.write("</tr>");
+            i++;
+        }while(i<=9);
+        document.write("</table>");
+        document.write("<br/>");
+
+        //------------------------------------------
+        //九九乘法表4
+        document.write("<table width=600px");
+        var i=9;
+        do{
+            document.write("<tr>");
+            var k=9;
+            while(k>i){
+                document.write("<td> </td >");
+                k--;
+            }
+            var j=i;
+                while(j>=1){
+                    document.write("<td>"+i+"*"+j+"="+j*i+"</td>");
+                    j--;
+                }
+            document.write("</tr>");
+            i--;
+        }while(i>=1)
+        document.write("</table>");
+        document.write("<br/>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
